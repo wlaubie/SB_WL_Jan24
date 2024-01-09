@@ -1,5 +1,6 @@
 #######Spring Board - Python Refresher
 
+###############Beginner Training
 
 #1) Code to Enter Age
 #birth_year = input("Enter your birth year: ")
@@ -25,7 +26,7 @@ print(price > 10 and price < 30)
 
 ###############IF CONDITION
 
-#6) If Expression
+#1) If Expression
 
 Temperature = 25
 if Temperature > 30:
@@ -35,7 +36,7 @@ elif Temperature >20: #(> 20, < 30)
     print("It's a nice day")
 print("Done")
 
-#8) Excercise: Weights
+#2) Excercise: Weights
 
 #Weight = input("Enter your Weight: ")
 #Measure = input("Enter your Measure: ")
@@ -50,7 +51,7 @@ print("Done")
 
 ###############WHILE CONDITION
 
-#9) While Condition
+#1) While Condition
 
 
 i = 1
@@ -59,7 +60,7 @@ while i <= 5:
     print(i)
     i = i + 1
 
-#10) While Condition with strings
+#2) While Condition with strings
 
 i = 1
 
@@ -69,7 +70,7 @@ while i <= 5:
 
 ###############Lists
 
-#11) Intro to Lists
+#1) Intro to Lists
 names = ["John", "Bob", "Mosh", "Sam", "Mary"]
 print(names)
 print(names[1])       #to pick a name in list
@@ -82,36 +83,60 @@ print(names[0:3]) #print first 3 names
 
 
 
-#12) List APPEND
+#2) List APPEND
 
 numbers = [1, 2, 3, 4, 5]
 numbers.append(6) #add number to end
 print(numbers)
 
-#13) List Insert
+#3) List Insert
 
 numbers = [1, 2, 3, 4, 5]
-numbers.insert(0,-1) #insert number (location, value to add)
+numbers.insert(0,-1) #insert number (location, value to add); [-1] locates last value
 print(numbers)
 
-#14) List Remove
+#4) List Remove / Pop
 
 numbers = [1, 2, 3, 4, 5]
 numbers.remove(3) #remove value from list
 print(numbers)
 
-#14) Clear Remove
+numbers = [1, 2, 3, 4, 5]
+numbers.pop() #remove last list value
+print(numbers)
+
+#5) inverse "ban" with "micro"
+lis = ["ban", "apl", "micro"]
+lis.pop()
+lis.remove("ban")
+lis.insert(0,"micro")
+lis.append("ban")
+print(lis)
+
+#or
+lis = ["ban", "apl", "micro"]
+temp = lis[0]
+lis[0] = lis[2]
+lis[2] = temp
+print(lis)
+
+#or
+lis = ["ban", "apl", "micro"]
+lis[0], lis[2] = lis[2], lis[0]
+print(lis)
+
+#6) Clear Remove
 
 numbers = [1, 2, 3, 4, 5]
 numbers.clear() #clear list
 print(numbers)
 
-#15) Item exist in list?
+#7) Item exist in list?
 
 numbers = [1, 2, 3, 4, 5]
 print(1 in numbers) #will reply True
 
-#15) How many items in list
+#8) How many items in list
 
 numbers = [1, 2, 3, 4, 5]
 print(len(numbers))
@@ -132,6 +157,7 @@ while i < len(numbers):
 
 ###############Range Function
 
+#1)
 numbers = range(5) #includes numbers from 0 to 4 (excludes 5)
 
 print(numbers)
@@ -139,7 +165,7 @@ print(numbers)
 for i in numbers:
     print(i)
 
-
+#2)
 numbers = range(5,10) #includes numbers from 5 to 9 (excludes 10)
 
 print(numbers)
@@ -147,7 +173,7 @@ print(numbers)
 for i in numbers:
     print(i)
 
-
+#3)
 
 numbers = range(5,10,2) #includes numbers from 5 to 9 by jump of 2
 
