@@ -105,6 +105,10 @@ numbers = [1, 2, 3, 4, 5]
 numbers.pop() #remove last list value
 print(numbers)
 
+numbers = [1, 2, 3, 4, 5]
+del(numbers[4]) #remove element 4 in list
+print(numbers)
+
 #5) inverse "ban" with "micro"
 lis = ["ban", "apl", "micro"]
 lis.pop()
@@ -140,6 +144,78 @@ print(1 in numbers) #will reply True
 
 numbers = [1, 2, 3, 4, 5]
 print(len(numbers))
+
+#9) Create Sublist
+
+numbers = [1, 2, 3, 4, 5]
+numbers_sub = numbers[2:4] #this will create a new list including value at start but excluding value at end so [3,4]
+print(numbers_sub)
+
+#10) List can hold multiple data types
+
+list_test = [1, True, "Alpha", 1.78, [4,5]] #this is specific to python
+
+#11) Combining lists
+
+numbers = [1, 2, 3]
+letters = ["a","b","c"]
+print(numbers + letters) #note that order matters
+print(dir(numbers)) #gives you a list of function you can apply to lists including function
+
+#12) Replace elment in list
+
+#a)
+numbers = [1, 2, 3]
+numbers[2] = "S"
+print(numbers)
+
+#b)
+x = ["a", "b", "c", "d"]
+x[1] = "r" #replace element of list
+print(x)
+x[2:] = ["s", "t"] #replaces elements after 3rd element with s,t
+print(x)
+
+#13) Practice Ex.: House List
+
+#Version 1
+
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Use slicing to create downstairs
+downstairs = areas[0:6]
+
+# Use slicing to create upstairs
+upstairs = areas[6:10]
+
+# Print out downstairs and upstairs
+print(downstairs)
+print(upstairs)
+
+#Version 2
+
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Use slicing to create downstairs
+downstairs = areas[:6]
+
+# Use slicing to create upstairs
+upstairs = areas[6:]
+
+# Print out downstairs and upstairs
+print(downstairs)
+print(upstairs)
+
+#14) Practice Ex.: House List
+
+x = [["a", "b", "c"],
+     ["d", "e", "f"],
+     ["g", "h", "i"]]
+
+print(x[2][0])     #go in list within a list pick element
+print(x[2][:2])    #go in list within list and grab 2nd member and print sub list member g&h
 
 
 ###############For Loop
@@ -192,3 +268,18 @@ for i in range(5):
 
 #Lists = []
 #Tuples = ()
+
+
+
+# Create the areas list and make some changes
+areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
+         "bedroom", 10.75, "bathroom", 10.50]
+
+# Add poolhouse data to areas, new list is areas_1
+area_1 = areas + ["poolhouse",24.5]
+print(area_1)
+
+# Add garage data to areas_1, new list is areas_2
+area_2 = area_1 + ["garage",15.45]
+print(area_2)
+
