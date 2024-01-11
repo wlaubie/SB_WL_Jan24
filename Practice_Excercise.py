@@ -41,3 +41,27 @@ areas_copy[0] = 5.0
 
 # Print areas
 print(areas)
+
+#Ex 3: List Functions
+
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Use append twice to add poolhouse and garage size
+areas.append(24.5)
+areas.append(15.45)
+
+# Print out areas
+print(areas)
+
+# Reverse the orders of the elements in areas
+areas.reverse()
+
+# Print out areas
+print(areas)
+
+import numpy as np
+print(np.__version__)
+
+print(np.array([1,2,3]))
+
