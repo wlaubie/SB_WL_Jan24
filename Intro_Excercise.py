@@ -1,6 +1,6 @@
 #######Spring Board - Python Refresher
 
-###############Beginner Training
+###############Beginner Training#############
 
 #1) Code to Enter Age
 #birth_year = input("Enter your birth year: ")
@@ -68,7 +68,7 @@ while i <= 5:
     print(i*"*")
     i = i + 1
 
-###############Lists
+###############Lists#############
 
 #1) Intro to Lists
 names = ["John", "Bob", "Mosh", "Sam", "Mary"]
@@ -218,7 +218,7 @@ print(x[2][0])     #go in list within a list pick element
 print(x[2][:2])    #go in list within list and grab 2nd member and print sub list member g&h
 
 
-###############For Loop
+###############For Loop#############
 
 numbers = [1, 2, 3, 4, 5]
 
@@ -231,7 +231,7 @@ while i < len(numbers):
     i = i+1
 
 
-###############Range Function
+###############Range Function#############
 
 #1)
 numbers = range(5) #includes numbers from 0 to 4 (excludes 5)
