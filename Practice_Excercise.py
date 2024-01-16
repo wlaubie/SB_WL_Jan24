@@ -65,3 +65,15 @@ print(np.__version__)
 
 print(np.array([1,2,3]))
 
+
+###### Matlib
+
+import matplotlib.pyplot as plt
+
+year = [1950,1970,1990,2010] #X Axis
+pop = [2.519,3.692,5.263,6.972]         #Y Axis
+
+plt.scatter(year,pop)
+plt.show()
+plt.close()
+
