@@ -130,7 +130,7 @@ def random_walk_2(n):
         y += dy
     return (x,y)
 
-number_of_walks = 20000
+number_of_walks = 1000 #change it to 20k to check real simulation
 
 for walk_length in range (1,31):
     no_transport = 0 #number of walks 4 or fewer blocks
@@ -142,3 +142,155 @@ for walk_length in range (1,31):
             no_transport += 1
     no_transport_percentage = float(no_transport) / number_of_walks
     print("Walk size = ", walk_length, "/ % of no transport = ", 100*no_transport_percentage )
+
+
+
+
+#### Random using Numpy
+
+#1: Random with Numpy
+
+# Import numpy as np
+import numpy as np
+
+# Set the seed: makes the random number always the same (so random but not so much - used when conducting analysis)
+np.random.seed(123)
+
+# Generate and print random float
+print(np.random.rand())
+
+#2: Dice Roll
+
+import numpy as np
+
+# Starting step
+step = 50
+
+# Roll the dice
+dice = np.random.randint(1,7)
+
+# Finish the control construct
+if dice <= 2 :
+    step = step - 1
+elif dice <= 5:
+    step = step + 1
+else :
+    step = step + np.random.randint(1,7)
+
+# Print out dice and step
+print(dice, step)
+
+
+#3: Random Walk with Dice throw
+
+import numpy as np
+
+np.random.seed(123)
+tails = [0]
+
+for x in range(10):
+    coin = np.random.randint(0,2)
+    tails.append(tails[x] + coin)
+
+print(tails)
+
+
+#4: Random Walk with Dice throw + Graph
+
+import numpy as np
+
+# NumPy is imported, seed is set
+np.random.seed(123)
+
+# Initialize random_walk
+random_walk = [0]
+
+# Complete the ___
+for x in range(100) :
+    # Set step: last element in random_walk
+    step = random_walk[-1]
+
+    # Roll the dice
+    dice = np.random.randint(1,7)
+
+    # Determine next step
+    if dice <= 2:
+        step = max(step - 1,0)
+    elif dice <= 5:
+        step = step + 1
+    else:
+        step = step + np.random.randint(1,7)
+
+    # append next_step to random_walk
+    random_walk.append(step)
+
+# Print random_walk
+print(random_walk)
+
+# Graph random_walk
+import matplotlib.pyplot as plt
+
+plt.plot(random_walk)
+plt.show()
+
+
+
+#5: Random Coin Toss + Histograam
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(123)
+final_tails = []
+
+for x in range(10000):
+    tails =[0]
+
+    for x in range(10):
+        coin = np.random.randint(0,2)
+        tails.append(tails[x] + coin)
+    final_tails.append(tails[-1])
+
+plt.hist(final_tails,bins = 100)
+plt.show()
+
+
+#6: Random Coin Toss + Histograam
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# numpy and matplotlib imported, seed set.
+
+# initialize and populate all_walks
+all_walks = []
+for i in range(5) :
+    random_walk = [0]
+    for x in range(100) :
+        step = random_walk[-1]
+        dice = np.random.randint(1,7)
+        if dice <= 2:
+            step = max(0, step - 1)
+        elif dice <= 5:
+            step = step + 1
+        else:
+            step = step + np.random.randint(1,7)
+        random_walk.append(step)
+    all_walks.append(random_walk)
+
+# Convert all_walks to NumPy array: np_aw
+np_aw = np.array(all_walks)
+
+# Plot np_aw and show
+plt.plot(np_aw)
+plt.show()
+
+# Clear the figure
+plt.clf()
+
+# Transpose np_aw: np_aw_t
+np_aw_t = np.transpose(np_aw)
+
+# Plot np_aw_t and show
+plt.plot(np_aw_t)
+plt.show()
