@@ -241,3 +241,4 @@ print("life" in "Life is a long lessin in humility".lower()) #lower makes all st
 ##names_with_angel = [name for name in girl_names if 'angel' in name.lower()]
 
 ##print(names_with_angel)
+
